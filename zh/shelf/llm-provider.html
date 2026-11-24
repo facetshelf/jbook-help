@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 模型设置 · FacetShelf 帮助中心</title>
+<meta name="description" content="配置自己的大模型 API Key：AI 模型的添加、字段说明、测试连接与拉取模型、默认与启用。">
+<link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/nav.js" defer></script>
+</head>
+<body data-lang="zh" data-page="shelf/llm-provider">
+<div class="layout">
+  <aside id="hs-nav" class="sidebar"></aside>
+  <main class="content">
+    <h1>AI 模型设置</h1>
+
+    <p class="lead">AI 翻译和 AI 对话都需要一个大模型服务。可以在这里填入自己的 API Key，按自己的账号和额度调用。</p>
+
+    <h2>在哪里</h2>
+    <ol>
+      <li>打开书架。</li>
+      <li>在左侧工具栏点「设置」。</li>
+      <li>右侧面板里找到「AI 模型」。</li>
+    </ol>
+
+    <h2>添加一个模型</h2>
+    <ol>
+      <li>点「+ 添加」。</li>
+      <li>选择「类型」，填写下表中的字段。</li>
+      <li>保存后点击「测试连接」和「拉取模型」。</li>
+    </ol>
+
+    <h2>字段</h2>
+    <table>
+      <tr><th>字段</th><th>说明</th></tr>
+      <tr><td>类型</td><td>调用协议。下拉里列出服务端支持的类型，常见是 OpenAI 兼容协议（DeepSeek、通义、Kimi、vLLM 等都按这个接）。</td></tr>
+      <tr><td>名称</td><td>只用来区分不同配置，随便起，例如「DeepSeek 主账号」。必填。</td></tr>
+      <tr><td>Base URL</td><td>厂商的接口地址，按其文档填写，例如 <code>https://api.deepseek.com</code>。必填。</td></tr>
+      <tr><td>API Key</td><td>厂商给的密钥。编辑已有配置时留空表示不修改。必填。</td></tr>
+      <tr><td>模型列表</td><td>可用的模型名，逗号分隔；手动填，或点「拉取模型」自动获取。</td></tr>
+      <tr><td>当前模型</td><td>从模型列表里单选一个，实际调用就用它。</td></tr>
+      <tr><td>启用</td><td>关闭后不参与翻译调用。默认模型不能关闭，要先取消默认。</td></tr>
+      <tr><td>设为默认</td><td>翻译没有指定模型时优先用它。只有一条配置时不能取消默认。</td></tr>
+    </table>
+
+    <h2>测试连接与拉取模型</h2>
+    <ul>
+      <li><strong>测试连接</strong>：用填好的地址和密钥发一次请求，确认能用；同时会探测这个模型支持哪些能力（工具调用、推理、JSON 输出），结果显示在提示里，比如✅ 连接成功（工具✓ 推理✓ JSON✓）。</li>
+      <li><strong>拉取模型</strong>：向服务端索取该密钥可用的模型列表，自动填进「模型列表」，省去手写模型名。</li>
+      <li>两项都要在配置保存之后才能用。</li>
+    </ul>
+
+    <h2>修改与删除</h2>
+    <ul>
+      <li>点卡片上的编辑图标可以改配置；API Key 留空表示保持不变。</li>
+      <li>删除前会确认。删掉最后一条配置后，AI 翻译与 AI 对话将没有可用模型。</li>
+      <li>取消某条的「默认」时，如果还有其它配置，会自动把另一条设为默认。</li>
+    </ul>
+
+    <h2>和翻译、AI 对话的关系</h2>
+    <p>这里配置的模型是<strong>共用</strong>的：AI 翻译和 AI 对话用的是同一条配置。换模型后，两边同时生效。</p>
+
+    <h2>关于密钥</h2>
+    <ul>
+      <li>密钥保存在你的账号下，服务端<strong>加密存储</strong>。</li>
+      <li>界面上不会回显完整密钥，只显示是否已保存，所以编辑时无法查看原 Key，只能重新填一次。</li>
+      <li>换电脑或换浏览器后，配置仍然在账号里，不需要重新填。</li>
+    </ul>
+
+    <h2>相关页面</h2>
+    <ul>
+      <li><a href="../ai/quota.html">配额与用量</a></li>
+      <li><a href="../translation/modes.html">三种翻译排版</a></li>
+      <li><a href="../ai/chat.html">基于本书提问</a></li>
+    </ul>
+  </main>
+</div>
+</body>
+</html>

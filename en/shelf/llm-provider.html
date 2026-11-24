@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Model Settings · FacetShelf Help Center</title>
+<meta name="description" content="Bring your own model API key: add a model, fill in the fields, test the connection, fetch models, and set a default.">
+<link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/nav.js" defer></script>
+</head>
+<body data-lang="en" data-page="shelf/llm-provider">
+<div class="layout">
+  <aside id="hs-nav" class="sidebar"></aside>
+  <main class="content">
+    <h1>AI Model Settings</h1>
+
+    <p class="lead">AI Translation and AI Chat both need a large language model. Here you can plug in your own API key and call it with your own vendor account and quota.</p>
+
+    <h2>Where to find it</h2>
+    <ol>
+      <li>Open the Shelf.</li>
+      <li>Click <strong>Settings</strong> in the left toolbar.</li>
+      <li>Find <strong>AI Model</strong> in the right-hand panel.</li>
+    </ol>
+
+    <h2>Add a model</h2>
+    <ol>
+      <li>Click <strong>+ Add</strong>.</li>
+      <li>Choose a <strong>Type</strong> and fill in the fields below.</li>
+      <li>Save, then click <strong>Test connection</strong> and <strong>Fetch models</strong>.</li>
+    </ol>
+
+    <h2>Fields</h2>
+    <table>
+      <tr><th>Field</th><th>Notes</th></tr>
+      <tr><td>Type</td><td>The calling protocol. The dropdown lists the types the server supports; the common one is the OpenAI-compatible protocol (DeepSeek, Qwen, Kimi, vLLM and others all connect this way).</td></tr>
+      <tr><td>Name</td><td>Only used to tell configurations apart — anything works, e.g. "DeepSeek main account". Required.</td></tr>
+      <tr><td>Base URL</td><td>The vendor's API endpoint, as documented by the vendor, e.g. <code>https://api.deepseek.com</code>. Required.</td></tr>
+      <tr><td>API Key</td><td>The key issued by the vendor. When editing, leave empty to keep the current key. Required.</td></tr>
+      <tr><td>Model list (comma-separated)</td><td>Available model names, comma-separated; type them by hand or click <strong>Fetch models</strong>.</td></tr>
+      <tr><td>Current model (single selection)</td><td>Pick one from the model list; this is the model actually called.</td></tr>
+      <tr><td>Enabled</td><td>When disabled, the model is not used for translation. A default model cannot be disabled — unset its default first.</td></tr>
+      <tr><td>Set as default</td><td>Used first when a translation does not name a model. With only one configuration, the default cannot be unset.</td></tr>
+    </table>
+
+    <h2>Test connection and fetch models</h2>
+    <ul>
+      <li><strong>Test connection</strong> — sends one request with the address and key to confirm they work. It also probes which capabilities the model supports (tool calling, reasoning, JSON output) and shows the result, e.g. ✅ Connection successful (tools ✓ reasoning ✓ JSON ✓).</li>
+      <li><strong>Fetch models</strong> — asks the server for the models this key can use and fills the model list, so you do not have to type names.</li>
+      <li>Both are available only after the configuration has been saved.</li>
+    </ul>
+
+    <h2>Edit and delete</h2>
+    <ul>
+      <li>Click the edit icon on a card to change the configuration; leaving API Key empty keeps it unchanged.</li>
+      <li>Deleting asks for confirmation. After the last configuration is deleted, AI Translation and AI Chat have no model to use.</li>
+      <li>If you unset one card as default and other configurations exist, another one automatically becomes the default.</li>
+    </ul>
+
+    <h2>Shared with translation and AI Chat</h2>
+    <p>The model configured here is <strong>shared</strong>: AI Translation and AI Chat use the same configuration. Changing it takes effect in both at once.</p>
+
+    <h2>About the key</h2>
+    <ul>
+      <li>The key is stored with your account and <strong>encrypted on the server</strong>.</li>
+      <li>The full key is never shown again; the interface only says whether one is saved. When editing you cannot read the old key, so enter it again.</li>
+      <li>On another computer or browser the configuration is still in your account; nothing needs re-entering.</li>
+    </ul>
+
+    <h2>Related pages</h2>
+    <ul>
+      <li><a href="../ai/quota.html">Quota &amp; Usage</a></li>
+      <li><a href="../translation/modes.html">Translation Layouts</a></li>
+      <li><a href="../ai/chat.html">Ask About This Book</a></li>
+    </ul>
+  </main>
+</div>
+</body>
+</html>

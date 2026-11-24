@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sources · FacetShelf Help Center</title>
+<meta name="description" content="The four source types — upload directory, server directory, client directory and network storage — and how to choose between them.">
+<link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/nav.js" defer></script>
+</head>
+<body data-lang="en" data-page="shelf/sources">
+<div class="layout">
+  <aside id="hs-nav" class="sidebar"></aside>
+  <main class="content">
+    <h1>Sources</h1>
+
+    <p class="lead">Sources decides where the books on your Shelf come from: a directory on the server, a folder on this computer, or network storage.</p>
+
+    <h2>Where to find it</h2>
+    <ol>
+      <li>Open the Shelf.</li>
+      <li>Click <strong>Sources</strong> in the <strong>left toolbar</strong>.</li>
+      <li>The Sources panel opens on the right, listing the source types available to you; click the button again to close it.</li>
+    </ol>
+
+    <h2>Four sections</h2>
+    <table>
+      <tr><th>Section</th><th>What it holds</th></tr>
+      <tr><td>Upload Directory</td><td>The directory where the site receives uploaded files, set by an administrator.</td></tr>
+      <tr><td>Server Directory</td><td>A directory on the server that hosts the site, added by an administrator.</td></tr>
+      <tr><td>Client Directory</td><td>A folder on this computer; once imported, its books join the Shelf.</td></tr>
+      <tr><td>Network Storage</td><td>A directory on WebDAV or S3 storage, synced into the Shelf.</td></tr>
+    </table>
+    <p>Which sections appear depends on your account: sections you have no access to are hidden.</p>
+
+    <h2>Which one to use</h2>
+    <ul>
+      <li>Books are in a folder on this computer — use <a href="source-client-dir.html">Client Directory</a>.</li>
+      <li>Books are on a NAS, cloud drive or object storage — use <a href="source-webdav.html">WebDAV</a> or <a href="source-s3.html">S3</a>.</li>
+      <li>Books are already on the server — use Server Directory (an administrator sets it up).</li>
+    </ul>
+
+    <h2>What they share</h2>
+    <ul>
+      <li>After an import or a sync, books appear in the contents tree with their original folder structure.</li>
+      <li>Re-importing, refreshing or syncing only updates the file list; it never overwrites titles, authors or favorites you changed by hand.</li>
+      <li>Deleting a network source also deletes the books it synced. Make sure you no longer need them first.</li>
+      <li>Books from a Client Directory or network storage are read only when opened, or during a batch parse. The server keeps only the parsed result.</li>
+    </ul>
+
+    <h2>Related pages</h2>
+    <ul>
+      <li><a href="source-client-dir.html">Client Directory</a></li>
+      <li><a href="source-webdav.html">WebDAV Source</a></li>
+      <li><a href="source-s3.html">S3 Source</a></li>
+      <li><a href="upload.html">Uploading Books</a></li>
+    </ul>
+  </main>
+</div>
+</body>
+</html>

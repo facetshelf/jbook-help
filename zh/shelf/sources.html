@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>来源管理 · FacetShelf 帮助中心</title>
+<meta name="description" content="书架左侧工具栏的「来源管理」面板：上传目录、服务器目录、客户目录与网络存储，以及该选哪一种。">
+<link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/nav.js" defer></script>
+</head>
+<body data-lang="zh" data-page="shelf/sources">
+<div class="layout">
+  <aside id="hs-nav" class="sidebar"></aside>
+  <main class="content">
+    <h1>来源管理</h1>
+
+    <p class="lead">来源管理决定书架里的书从哪里来：服务器上的目录、你这台电脑上的目录，或者网络存储。</p>
+
+    <h2>在哪里</h2>
+    <ol>
+      <li>打开书架。</li>
+      <li>在<strong>左侧工具栏</strong>点「来源管理」。</li>
+      <li>右侧面板会打开「来源管理」，下面按分区列出可用的来源；再点一次左侧的按钮可以关掉。</li>
+    </ol>
+
+    <h2>四个分区</h2>
+    <table>
+      <tr><th>分区</th><th>装的是什么</th></tr>
+      <tr><td>上传目录</td><td>网站接收上传文件的目录，由管理员设置。</td></tr>
+      <tr><td>服务器目录</td><td>网站所在服务器上的一个目录，由管理员添加。</td></tr>
+      <tr><td>客户目录</td><td>你这台电脑上的一个文件夹，导入后书会进书架。</td></tr>
+      <tr><td>网络存储</td><td>WebDAV 或 S3 存储里的目录，同步进书架。</td></tr>
+    </table>
+    <p>分区按账号权限显示：没有权限的分区不出现。</p>
+
+    <h2>该用哪一种</h2>
+    <ul>
+      <li>书在本机文件夹里 —— 用<a href="source-client-dir.html">客户目录</a>。</li>
+      <li>书在 NAS、网盘或对象存储里 —— 用<a href="source-webdav.html">WebDAV</a> 或 <a href="source-s3.html">S3</a>。</li>
+      <li>书已经放在服务器目录里 —— 用服务器目录（管理员操作）。</li>
+    </ul>
+
+    <h2>共同点</h2>
+    <ul>
+      <li>客户目录导入后、网络存储同步后，书都按原来的目录结构出现在书架的目录树里。</li>
+      <li>重新导入、刷新、同步只更新文件清单，不会覆盖你手动改过的书名、作者、收藏等。</li>
+      <li>删除网络存储来源会连同它同步来的书籍一起删除，删之前先确认这些书不再需要。</li>
+      <li>客户目录、网络存储的书籍，只有在它们被打开时或批量解析时，才会从客户目录上传和从网络存储读取。并且服务器上只保存解析结果。</li>
+    </ul>
+
+    <h2>相关页面</h2>
+    <ul>
+      <li><a href="source-client-dir.html">客户目录</a></li>
+      <li><a href="source-webdav.html">WebDAV 来源</a></li>
+      <li><a href="source-s3.html">S3 存储来源</a></li>
+      <li><a href="upload.html">上传书籍</a></li>
+    </ul>
+  </main>
+</div>
+</body>
+</html>

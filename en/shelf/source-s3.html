@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S3 Source · FacetShelf Help Center</title>
+<meta name="description" content="Connect S3-compatible object storage: what Endpoint, Bucket and Prefix mean, and how S3 differs from WebDAV.">
+<link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/nav.js" defer></script>
+</head>
+<body data-lang="en" data-page="shelf/source-s3">
+<div class="layout">
+  <aside id="hs-nav" class="sidebar"></aside>
+  <main class="content">
+    <h1>S3 Source</h1>
+
+    <p class="lead">S3-compatible object storage — self-hosted MinIO, Cloudflare R2, or a cloud provider's object storage — can be connected here, and the e-books in a bucket can be synced to the Shelf.</p>
+
+    <h2>Add a source</h2>
+    <ol>
+      <li>Click <strong>Sources</strong> in the left toolbar, then <strong>+ Add</strong> in the <strong>Network Storage</strong> section.</li>
+      <li>Choose <strong>S3 Remote</strong> as the protocol.</li>
+      <li>Fill in the fields below.</li>
+      <li>Click <strong>Test Connection</strong>; save once it succeeds and the first sync starts.</li>
+    </ol>
+
+    <h2>Fields</h2>
+    <table>
+      <tr><th>Field</th><th>Notes</th></tr>
+      <tr><td>Name</td><td>Display name; after syncing it becomes the root node in the contents tree. Required.</td></tr>
+      <tr><td>Endpoint URL</td><td>The storage endpoint, e.g. <code>https://s3.example.com</code>. Required.</td></tr>
+      <tr><td>Bucket</td><td>Bucket name. Required.</td></tr>
+      <tr><td>Prefix</td><td>Scan only files under this prefix — the equivalent of WebDAV's Root Path, e.g. <code>books/</code>. Leave empty to scan the whole bucket.</td></tr>
+      <tr><td>Region</td><td>Region; <code>us-east-1</code> by default.</td></tr>
+      <tr><td>Access Key</td><td>Required.</td></tr>
+      <tr><td>Secret Key</td><td>Required; when editing an existing source, leave empty to keep the current one.</td></tr>
+    </table>
+
+    <h2>How S3 differs from WebDAV</h2>
+    <ul>
+      <li>WebDAV locates a directory with <strong>Server URL + Root Path</strong>; S3 uses <strong>Endpoint URL + Bucket + Prefix</strong>.</li>
+      <li>Everything else works the same: test connection, sync, removing books deleted remotely, and keeping bookmarks and notes.</li>
+    </ul>
+
+    <h2>Address rules</h2>
+    <ul>
+      <li>The endpoint must be http or https, and must be reachable from the public internet.</li>
+      <li>Local and intranet addresses are rejected by default; an administrator can add them to a server-side allowlist.</li>
+    </ul>
+
+    <h2>Related pages</h2>
+    <ul>
+      <li><a href="sources.html">Sources</a></li>
+      <li><a href="source-webdav.html">WebDAV Source</a></li>
+    </ul>
+  </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>客户目录 · FacetShelf 帮助中心</title>
+<meta name="description" content="把本机文件夹里的电子书导入书架：浏览器要求、导入步骤、支持的格式，以及授权失效后怎么恢复。">
+<link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/nav.js" defer></script>
+</head>
+<body data-lang="zh" data-page="shelf/source-client-dir">
+<div class="layout">
+  <aside id="hs-nav" class="sidebar"></aside>
+  <main class="content">
+    <h1>客户目录</h1>
+
+    <p class="lead">客户目录让你直接把本机某个文件夹里的电子书导入书架，不用先上传到别处。</p>
+
+    <h2>前提</h2>
+    <ul>
+      <li>用 Chrome 或 Edge 86 及以上版本（要用浏览器的目录访问能力）。</li>
+      <li>导入时浏览器会问是否允许访问该文件夹，必须点允许。</li>
+    </ul>
+
+    <h2>导入</h2>
+    <ol>
+      <li>点左侧工具栏的「来源管理」，在右侧面板找到「客户目录」分区。</li>
+      <li>输入一个目录名称，它会显示在书架里。</li>
+      <li>点「导入」，在弹出的选择框里选中那个文件夹。</li>
+      <li>浏览器会弹出授权弹窗，选择「允许此网站查看和复制文件」来授权，只有允许访问后才开始扫描，支持的电子书会按原来的目录结构进入书架。</li>
+    </ol>
+
+    <h2>打开/解析客户目录书籍</h2>
+    <ol>
+      <li>打开前会先从本机上传到服务器并解析。</li>
+      <li>因此，只有存有这些书的电脑才能上传或加载它们。当书籍在服务器解析后，其他设备才可以正常阅读。</li>
+      <li>如果原来的授权丢失或失效（例如清除了浏览器缓存或更换了设备），需要在来源管理里重新导入该目录。</li>
+    </ol>    
+
+    <h2>授权只在这台电脑有效</h2>
+    <ul>
+      <li>浏览器的目录授权只对这台电脑的这个浏览器有效，换个设备看不到原来的文件夹。</li>
+      <li>清过缓存、换过电脑或浏览器后，如果提示授权丢失或失效：在来源管理里点该目录的「重新导入」，重新选中<strong>同一个文件夹</strong>并允许访问。</li>
+      <li>重新导入不会重复建书，已有的书和书签都还在。</li>
+    </ul>
+
+    <h2>数量限制</h2>
+    <p>单次导入的书籍数量、以及账号能保存的远程书籍总数，都受账号档位限制；超出时会在写入之前提示。</p>
+
+    <h2>相关页面</h2>
+    <ul>
+      <li><a href="sources.html">来源管理</a></li>
+      <li><a href="upload.html">上传书籍</a></li>
+    </ul>
+  </main>
+</div>
+</body>
+</html>

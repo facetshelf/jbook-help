@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WebDAV 来源 · FacetShelf 帮助中心</title>
+<meta name="description" content="把支持 WebDAV 的 NAS、网盘接入书架：字段怎么填、测试连接、同步规则与地址限制。">
+<link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/nav.js" defer></script>
+</head>
+<body data-lang="zh" data-page="shelf/source-webdav">
+<div class="layout">
+  <aside id="hs-nav" class="sidebar"></aside>
+  <main class="content">
+    <h1>WebDAV 来源</h1>
+
+    <p class="lead">NAS、Nextcloud、坚果云、群晖这类支持 WebDAV 的存储，可以在这里接入，把里面的电子书同步到书架。</p>
+
+    <h2>添加</h2>
+    <ol>
+      <li>点左侧工具栏的「来源管理」，在右侧面板的「网络存储」分区点「+ 添加」。</li>
+      <li>协议类型选 <strong>WebDAV</strong>。</li>
+      <li>填下面的字段。</li>
+      <li>点「测试连接」，通过后保存。</li>
+      <li>保存后开始第一次同步；以后可随时在卡片上点「同步」。</li>
+    </ol>
+
+    <h2>字段</h2>
+    <table>
+      <tr><th>字段</th><th>说明</th></tr>
+      <tr><td>名称</td><td>显示名称，同步后作为目录树里的根节点。</td></tr>
+      <tr><td>地址</td><td>WebDAV 服务地址，例如 <code>https://example.com/dav/</code>。必填。</td></tr>
+      <tr><td>根路径</td><td>只扫描这个子目录；留空扫描整个服务。</td></tr>
+      <tr><td>用户名</td><td>必填。</td></tr>
+      <tr><td>密码</td><td>必填；编辑已有来源时留空表示不修改。</td></tr>
+      <tr><td>超时</td><td>单位秒，默认 30。</td></tr>
+      <tr><td>验证 SSL 证书</td><td>内网自签证书时取消勾选。</td></tr>
+    </table>
+
+    <h2>同步做了什么</h2>
+    <ul>
+      <li>增量同步：只补新增、更新变化的文件，不会清空已有内容。</li>
+      <li>远程已经删掉的书，会从书架移除。</li>
+      <li>每本书的身份由「来源 + 路径」决定，路径不变则书签、笔记和阅读进度都保留。</li>
+      <li>卡片上会显示同步状态、上次同步时间和本次同步了多少本；失败时给出原因。</li>
+    </ul>
+
+    <h2>地址限制</h2>
+    <ul>
+      <li>只接受 http / https 地址，而且必须能从公网访问。</li>
+      <li>局域网地址（如 <code>192.168.x.x</code>）默认被拒绝，需要管理员在服务端加入白名单。</li>
+      <li>地址填错时保存或同步会提示「无效的连接地址」。</li>
+    </ul>
+
+    <h2>数量限制</h2>
+    <p>单次同步的书籍数量、以及账号能保存的远程书籍总数，都受账号档位限制；超出时会在写入任何数据之前就提示。</p>
+
+    <h2>相关页面</h2>
+    <ul>
+      <li><a href="sources.html">来源管理</a></li>
+      <li><a href="source-s3.html">S3 存储来源</a></li>
+    </ul>
+  </main>
+</div>
+</body>
+</html>

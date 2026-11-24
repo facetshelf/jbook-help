@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WebDAV Source · FacetShelf Help Center</title>
+<meta name="description" content="Connect a WebDAV server such as a NAS or Nextcloud: which fields to fill in, how syncing works, and which addresses are allowed.">
+<link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/nav.js" defer></script>
+</head>
+<body data-lang="en" data-page="shelf/source-webdav">
+<div class="layout">
+  <aside id="hs-nav" class="sidebar"></aside>
+  <main class="content">
+    <h1>WebDAV Source</h1>
+
+    <p class="lead">Any storage that speaks WebDAV — a NAS, Nextcloud, Jianguoyun, Synology and the like — can be connected here, and its e-books can be synced to the Shelf.</p>
+
+    <h2>Add a source</h2>
+    <ol>
+      <li>Click <strong>Sources</strong> in the left toolbar, then <strong>+ Add</strong> in the <strong>Network Storage</strong> section.</li>
+      <li>Choose <strong>WebDAV</strong> as the protocol.</li>
+      <li>Fill in the fields below.</li>
+      <li>Click <strong>Test Connection</strong>; save once it succeeds.</li>
+      <li>The first sync starts right after saving. Later, click <strong>Sync</strong> on the card whenever you like.</li>
+    </ol>
+
+    <h2>Fields</h2>
+    <table>
+      <tr><th>Field</th><th>Notes</th></tr>
+      <tr><td>Name</td><td>Display name; after syncing it becomes the root node in the contents tree.</td></tr>
+      <tr><td>Server URL</td><td>The WebDAV endpoint, e.g. <code>https://example.com/dav/</code>. Required.</td></tr>
+      <tr><td>Root Path</td><td>Scan only this subfolder; leave empty to scan the whole server.</td></tr>
+      <tr><td>Username</td><td>Required.</td></tr>
+      <tr><td>Password</td><td>Required; when editing an existing source, leave empty to keep the current one.</td></tr>
+      <tr><td>Timeout (s)</td><td>In seconds; 30 by default.</td></tr>
+      <tr><td>Verify SSL Certificate</td><td>Uncheck for self-signed certificates on a local network.</td></tr>
+    </table>
+
+    <h2>What a sync does</h2>
+    <ul>
+      <li>Incremental: it only adds new files and updates changed ones; nothing already there is cleared.</li>
+      <li>Books deleted remotely are removed from the Shelf.</li>
+      <li>A book is identified by its <strong>source + path</strong>. As long as the path stays the same, its bookmarks, notes and reading position are kept.</li>
+      <li>The card shows the sync state, the time of the last sync and how many books were synced; failures come with a reason.</li>
+    </ul>
+
+    <h2>Address rules</h2>
+    <ul>
+      <li>Only http and https addresses are accepted, and they must be reachable from the public internet.</li>
+      <li>Local addresses such as <code>192.168.x.x</code> are rejected by default; an administrator can add them to a server-side allowlist.</li>
+      <li>If the address is wrong, saving or syncing reports an invalid connection address.</li>
+    </ul>
+
+    <h2>Limits</h2>
+    <p>How many books a single sync can add, and how many remote books an account can keep, both depend on your plan. You are warned before any data is written.</p>
+
+    <h2>Related pages</h2>
+    <ul>
+      <li><a href="sources.html">Sources</a></li>
+      <li><a href="source-s3.html">S3 Source</a></li>
+    </ul>
+  </main>
+</div>
+</body>
+</html>

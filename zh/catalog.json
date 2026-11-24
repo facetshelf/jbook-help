@@ -1,0 +1,84 @@
+{
+  "lang": "zh",
+  "htmlLang": "zh-CN",
+  "site": "FacetShelf 帮助中心",
+  "home": {
+    "title": "FacetShelf 帮助中心",
+    "lead": "有什么我们可以帮助您的吗？"
+  },
+  "groups": [
+    {
+      "id": "start",
+      "title": "快速开始",
+      "items": [
+        { "path": "start/what-is", "title": "认识 FacetShelf", "desc": "产品定位与三大能力" },
+        { "path": "start/sign-in", "title": "注册与登录", "desc": "邮箱注册、第三方登录、匿名使用" },
+        { "path": "start/first-book", "title": "找到第一本书", "desc": "浏览书库、筛选与搜索" },
+        { "path": "start/reader-tour", "title": "阅读界面速览", "desc": "顶栏、正文区与右侧面板" }
+      ]
+    },
+    {
+      "id": "shelf",
+      "title": "书架",
+      "items": [
+        { "path": "shelf/views", "title": "书架与视图", "desc": "网格、列表、排序与分页" },
+        { "path": "shelf/facets", "title": "目录、分类与标签", "desc": "三类筛选与组合使用" },
+        { "path": "shelf/sources", "title": "来源管理", "desc": "书从哪里来：四个分区与选择" },
+        { "path": "shelf/source-client-dir", "title": "客户目录", "desc": "导入本机文件夹里的书" },
+        { "path": "shelf/source-webdav", "title": "WebDAV 来源", "desc": "接入 NAS、网盘并同步" },
+        { "path": "shelf/source-s3", "title": "S3 存储来源", "desc": "接入 S3 兼容对象存储" },
+        { "path": "shelf/upload", "title": "上传书籍", "desc": "支持 EPUB、PDF、MOBI、TXT" },
+        { "path": "shelf/llm-provider", "title": "AI 模型设置", "desc": "配置 API Key、测试连接与默认模型" }
+      ]
+    },
+    {
+      "id": "reading",
+      "title": "阅读",
+      "items": [
+        { "path": "reading/modes", "title": "四种阅读模式", "desc": "连续、单章连续、单页、双页" },
+        { "path": "reading/navigate", "title": "翻页与定位", "desc": "翻页方式、边界换章、恢复位置" },
+        { "path": "reading/toc-search", "title": "目录与书内搜索", "desc": "章节跳转与全文搜索" },
+        { "path": "reading/bookmarks", "title": "书签", "desc": "添加、查看与跳转" },
+        { "path": "reading/annotations", "title": "笔记与标注", "desc": "选中文字后的全部操作" },
+        { "path": "reading/settings", "title": "阅读设置总览", "desc": "9 个设置分区的用途" },
+        { "path": "reading/profiles", "title": "阅读配置档", "desc": "保存与切换多套配置" },
+        { "path": "reading/appearance", "title": "外观与主题", "desc": "字体、字号、背景与明暗主题" },
+        { "path": "reading/offline", "title": "离线阅读", "desc": "下载整本书，断网也能接着读" }
+      ]
+    },
+    {
+      "id": "translation",
+      "title": "AI 翻译",
+      "items": [
+        { "path": "translation/modes", "title": "三种翻译排版", "desc": "行间对照、仅译文、双列对照" },
+        { "path": "translation/scope-language", "title": "翻译范围与语言", "desc": "跟随阅读、当前章、整书" },
+        { "path": "translation/selection", "title": "划词翻译", "desc": "选中文字即时翻译" }
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "AI 对话",
+      "items": [
+        { "path": "ai/chat", "title": "基于本书提问", "desc": "回答依据与引用标记" },
+        { "path": "ai/sessions", "title": "会话管理", "desc": "新建、切换与删除会话" },
+        { "path": "ai/quota", "title": "配额与用量", "desc": "额度、用量与用尽后的表现" }
+      ]
+    },
+    {
+      "id": "account",
+      "title": "账号",
+      "items": [
+        { "path": "account/profile", "title": "个人资料与密码", "desc": "修改资料、修改密码" },
+        { "path": "account/language", "title": "界面语言", "desc": "8 种界面语言" }
+      ]
+    },
+    {
+      "id": "faq",
+      "title": "常见问题",
+      "items": [
+        { "path": "faq/index", "title": "常见问题", "desc": "通用、书籍与格式、AI 功能" },
+        { "path": "faq/troubleshooting", "title": "故障排除", "desc": "打不开书、译文不出来、AI 无响应" }
+      ]
+    }
+  ]
+}

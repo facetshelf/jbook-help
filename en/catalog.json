@@ -1,0 +1,84 @@
+{
+  "lang": "en",
+  "htmlLang": "en",
+  "site": "FacetShelf Help Center",
+  "home": {
+    "title": "FacetShelf Help Center",
+    "lead": "How can we help you today?"
+  },
+  "groups": [
+    {
+      "id": "start",
+      "title": "Getting Started",
+      "items": [
+        { "path": "start/what-is", "title": "What is FacetShelf", "desc": "What it does and what you need" },
+        { "path": "start/sign-in", "title": "Sign In", "desc": "Email, social sign-in, guest reading" },
+        { "path": "start/first-book", "title": "Find Your First Book", "desc": "Browse, filter and search the shelf" },
+        { "path": "start/reader-tour", "title": "Reader at a Glance", "desc": "Toolbar, text area and side panels" }
+      ]
+    },
+    {
+      "id": "shelf",
+      "title": "Shelf",
+      "items": [
+        { "path": "shelf/views", "title": "Shelf & Views", "desc": "Grid, list, sorting and paging" },
+        { "path": "shelf/facets", "title": "Contents, Categories & Tags", "desc": "Three ways to narrow the shelf" },
+        { "path": "shelf/sources", "title": "Sources", "desc": "Where books come from: four source types" },
+        { "path": "shelf/source-client-dir", "title": "Client Directory", "desc": "Import a folder from this computer" },
+        { "path": "shelf/source-webdav", "title": "WebDAV Source", "desc": "Connect a NAS or cloud drive and sync" },
+        { "path": "shelf/source-s3", "title": "S3 Source", "desc": "Connect S3-compatible object storage" },
+        { "path": "shelf/upload", "title": "Uploading Books", "desc": "EPUB, PDF, MOBI and TXT" },
+        { "path": "shelf/llm-provider", "title": "AI Model Settings", "desc": "API key, connection test and default model" }
+      ]
+    },
+    {
+      "id": "reading",
+      "title": "Reading",
+      "items": [
+        { "path": "reading/modes", "title": "Reading Modes", "desc": "Continuous, single frame, single page, double page" },
+        { "path": "reading/navigate", "title": "Paging & Position", "desc": "Turn pages, cross chapters, resume reading" },
+        { "path": "reading/toc-search", "title": "Contents & In-Book Search", "desc": "Jump by chapter, search inside the book" },
+        { "path": "reading/bookmarks", "title": "Bookmarks", "desc": "Add, review and jump back" },
+        { "path": "reading/annotations", "title": "Notes & Annotations", "desc": "Everything in the selection menu" },
+        { "path": "reading/settings", "title": "Reading Settings Overview", "desc": "What the nine sections control" },
+        { "path": "reading/profiles", "title": "Reading Profiles", "desc": "Save and switch between setups" },
+        { "path": "reading/appearance", "title": "Appearance & Theme", "desc": "Fonts, colors, spacing and themes" },
+        { "path": "reading/offline", "title": "Offline Reading", "desc": "Download the whole book and keep reading without a network" }
+      ]
+    },
+    {
+      "id": "translation",
+      "title": "AI Translation",
+      "items": [
+        { "path": "translation/modes", "title": "Translation Layouts", "desc": "Interlinear, translation only, dual-column" },
+        { "path": "translation/scope-language", "title": "Translation Scope & Languages", "desc": "Follow reading, current chapter, whole book" },
+        { "path": "translation/selection", "title": "Translate Selection", "desc": "Translate the text you select" }
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "AI Chat",
+      "items": [
+        { "path": "ai/chat", "title": "Ask About This Book", "desc": "Answers grounded in the book, with citations" },
+        { "path": "ai/sessions", "title": "Chat Sessions", "desc": "Start, switch and delete sessions" },
+        { "path": "ai/quota", "title": "Quota & Usage", "desc": "How usage is counted, what happens when it runs out" }
+      ]
+    },
+    {
+      "id": "account",
+      "title": "Account",
+      "items": [
+        { "path": "account/profile", "title": "Profile & Password", "desc": "Update your details and password" },
+        { "path": "account/language", "title": "Interface Language", "desc": "Eight interface languages" }
+      ]
+    },
+    {
+      "id": "faq",
+      "title": "Help",
+      "items": [
+        { "path": "faq/index", "title": "FAQ", "desc": "General, books and formats, AI" },
+        { "path": "faq/troubleshooting", "title": "Troubleshooting", "desc": "Book won't open, no translation, AI not responding" }
+      ]
+    }
+  ]
+}

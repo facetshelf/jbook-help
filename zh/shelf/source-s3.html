@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S3 存储来源 · FacetShelf 帮助中心</title>
+<meta name="description" content="把 S3 兼容对象存储接入书架：Endpoint、Bucket、Prefix 等字段怎么填，以及与 WebDAV 的差别。">
+<link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/nav.js" defer></script>
+</head>
+<body data-lang="zh" data-page="shelf/source-s3">
+<div class="layout">
+  <aside id="hs-nav" class="sidebar"></aside>
+  <main class="content">
+    <h1>S3 存储来源</h1>
+
+    <p class="lead">S3 兼容的对象存储（自建 MinIO、cloudflare R2 Object Storage、各类云厂商的对象存储）可以接入，把桶里的电子书同步到书架。</p>
+
+    <h2>添加</h2>
+    <ol>
+      <li>点左侧工具栏的「来源管理」，在右侧面板的「网络存储」分区点「+ 添加」。</li>
+      <li>协议类型选 <strong>S3 Remote</strong>。</li>
+      <li>填下面的字段。</li>
+      <li>点「测试连接」，通过后保存并开始第一次同步。</li>
+    </ol>
+
+    <h2>字段</h2>
+    <table>
+      <tr><th>字段</th><th>说明</th></tr>
+      <tr><td>Name</td><td>显示名称，同步后在目录树中作为根节点。必填。</td></tr>      
+      <tr><td>Endpoint</td><td>存储服务地址，例如 <code>https://s3.example.com</code>。必填。</td></tr>
+      <tr><td>Bucket</td><td>桶名。必填。</td></tr>
+      <tr><td>Prefix</td><td>只扫描这个前缀下的文件，作用相当于 WebDAV 的根路径，例如 <code>books/</code>。留空扫描整个桶。</td></tr>
+      <tr><td>Region</td><td>区域，默认 <code>us-east-1</code>。</td></tr>
+      <tr><td>Access Key</td><td>必填。</td></tr>
+      <tr><td>Secret Key</td><td>必填；编辑已有来源时留空表示不修改。</td></tr>
+    </table>
+
+    <h2>和 WebDAV 的差别</h2>
+    <ul>
+      <li>WebDAV 用「地址 + 根路径」定位目录；S3 用「Endpoint + Bucket + Prefix」。</li>
+      <li>其余的测试连接、同步、清理远端已删除的书、书签笔记保留，规则完全一样。</li>
+    </ul>
+
+    <h2>地址限制</h2>
+    <ul>
+      <li>Endpoint 只接受 http / https，且必须能从公网访问。</li>
+      <li>局域网或内网地址默认被拒绝，需要管理员在服务端加入白名单。</li>
+    </ul>
+
+    <h2>相关页面</h2>
+    <ul>
+      <li><a href="sources.html">来源管理</a></li>
+      <li><a href="source-webdav.html">WebDAV 来源</a></li>
+    </ul>
+  </main>
+</div>
+</body>
+</html>
